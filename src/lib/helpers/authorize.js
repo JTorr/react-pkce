@@ -33,6 +33,6 @@ export default function authorize({
     query.scope = scopes.join(' ')
   }
   
-  const url = `${ provider }/authorize?${ hashed(query) }`
+  const url = `${ provider }/auth?${ hashed(query) }`
   window.location.replace(url)
 }
